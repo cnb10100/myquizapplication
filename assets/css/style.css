@@ -1,0 +1,105 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+}
+
+:root {
+  --hue-neutral: 200;
+  --hue-wrong: 0;
+  --hue-right: 145;
+}
+
+body {
+  --hue: var(--hue-neutral);
+  padding: 0;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  height: 100vh;
+  background-color: hsl(var(--hue), 100%, 20%);
+}
+
+body.right {
+  --hue: var(--hue-right);
+}
+
+body.wrong {
+  --hue: var(--hue-wrong);
+}
+
+/* HUD SECTION */
+
+#hud {
+    display: flex;
+    justify-content: space-between;
+}
+
+.hud-prefix {
+    text-align: center;
+    font-size: 1.5rem;
+}
+
+.hud-main-text {
+    text-align: center;
+}
+
+.container {
+  width: 800px;
+  max-width: 80%;
+  background-color: #ffffff;
+  border-radius: 5px;
+  padding: 10px;
+  box-shadow: 0 0 15px 2px;
+}
+
+.btn-grid {
+  display: grid;
+  grid-template-columns: repeat(2, auto);
+  gap: 15px;
+  margin: 20px 0;
+}
+
+.btn {
+  --hue: var(--hue-neutral);
+  background-color: hsl(var(--hue), 100%, 50%);
+  border: 1px solid hsl(var(--hue), 100%, 30%);
+  border-radius: 5px;
+  padding: 5px 10px;
+  color: #ffffff;
+  outline: none;
+}
+
+.btn:hover {
+  border-color: #000000;
+}
+
+.btn.right {
+  --hue: var(--hue-right);
+  color: #000000;
+}
+
+.btn.wrong {
+  --hue: var(--hue-wrong);
+}
+
+.srt-btn,
+.nxt-btn {
+  font-size: 1.5rem;
+  font-weight: bold;
+  padding: 10 20px;
+}
+
+.user-controls {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.hide {
+  display: none;
+}
+
